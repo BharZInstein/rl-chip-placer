@@ -2,7 +2,7 @@
 
 > AI-powered chip placement using Reinforcement Learning and Graph Neural Networks
 
-Optimizes VLSI component placement to minimize wirelength using deep learning. Alternative to analytical placers like DREAMPlace.
+Optimizes chip component placement to minimize wirelength using deep learning. Alternative to analytical placers like DREAMPlace.
 
 ## 🚀 Quick Start
 
