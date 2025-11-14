@@ -13,12 +13,12 @@ pip install torch torch-geometric numpy
 
 ### Run
 ```bash
-python rl.py daddaout.def
+python rl.py dadda.def
 ```
 
 ### Output
 ```
-✅ daddaout.output.def  (optimized placement)
+✅ dadda.output.def  (optimized placement)
 ```
 
 ## 📁 Files
@@ -26,8 +26,8 @@ python rl.py daddaout.def
 ```
 rl-chip-placer/
 ├── rl.py              # Main algorithm
-├── daddaout.def       # Input design
-└── daddaout.output.def # Optimized output
+├── dadda.def       # Input design
+└── dadda.output.def # Optimized output
 ```
 
 ## 🧠 How It Works
@@ -48,8 +48,8 @@ rl-chip-placer/
 ```bash
 openroad
 read_lef your_tech.lef
-read_def daddaout.output.def
-gui::show
+read_lef your.lef
+read_def dadda.output.def
 ```
 
 ## ⚙️ Adjust Quality
