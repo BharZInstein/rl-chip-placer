@@ -1,0 +1,63 @@
+VERSION 5.8;
+DIVIDERCHAR "/";
+BUSBITCHARS "[]";
+DESIGN block_test;
+UNITS DISTANCE MICRONS 1000;
+DIEAREA ( 0 0 ) ( 10000 3000 );
+
+ROW ROW_1 CORE 0 0 N DO 20 BY 1 STEP 500 0 ;
+
+COMPONENTS 20 ;
+   - U1  NAND2X1   + PLACED ( 200   1000 ) N ;
+   - U2  NOR2X1    + PLACED ( 700   1000 ) N ;
+   - U3  INVX1     + PLACED ( 1200  1000 ) N ;
+   - U4  AND2X1    + PLACED ( 1700  1000 ) N ;
+   - U5  XOR2X1    + PLACED ( 2200  1000 ) N ;
+   - U6  DFFRX1    + PLACED ( 2700  1000 ) N ;
+   - U7  BUF1      + PLACED ( 3200  1000 ) N ;
+   - U8  XNOR2X1   + PLACED ( 3700  1000 ) N ;
+   - U9  OR2X1     + PLACED ( 4200  1000 ) N ;
+   - U10 NAND2X1   + PLACED ( 4700  1000 ) N ;
+   - U11 NOR2X1    + PLACED ( 5200  1000 ) N ;
+   - U12 INVX1     + PLACED ( 5700  1000 ) N ;
+   - U13 AND2X1    + PLACED ( 6200  1000 ) N ;
+   - U14 XOR2X1    + PLACED ( 6700  1000 ) N ;
+   - U15 DFFRX1    + PLACED ( 7200  1000 ) N ;
+   - U16 BUF1      + PLACED ( 7700  1000 ) N ;
+   - U17 XNOR2X1   + PLACED ( 8200  1000 ) N ;
+   - U18 OR2X1     + PLACED ( 8700  1000 ) N ;
+   - U19 NAND2X1   + PLACED ( 9200  1000 ) N ;
+   - U20 NOR2X1    + PLACED ( 9700  1000 ) N ;
+END COMPONENTS
+
+PINS 4 ;
+   - IN1 + NET NET1 + DIRECTION INPUT + PLACED ( 0   500 ) N ;
+   - IN2 + NET NET2 + DIRECTION INPUT + PLACED ( 0   2500 ) N ;
+   - OUT1 + NET NET3 + DIRECTION OUTPUT + PLACED ( 10000 500 ) N ;
+   - OUT2 + NET NET4 + DIRECTION OUTPUT + PLACED ( 10000 2500 ) N ;
+END PINS
+
+NETS 20 ;
+   - NET1 ( U1 A ) ( IN1 ) ;
+   - NET2 ( U2 A ) ( IN2 ) ;
+   - NET3 ( U20 Y ) ( OUT1 ) ;
+   - NET4 ( U15 Y ) ( OUT2 ) ;
+   - NET5 ( U1 Y ) ( U2 A ) ;
+   - NET6 ( U2 Y ) ( U3 A ) ;
+   - NET7 ( U3 Y ) ( U4 A ) ;
+   - NET8 ( U4 Y ) ( U5 A ) ;
+   - NET9 ( U5 Y ) ( U6 D ) ;
+   - NET10 ( U6 Q ) ( U7 A ) ;
+   - NET11 ( U7 Y ) ( U8 A ) ;
+   - NET12 ( U8 Y ) ( U9 A ) ;
+   - NET13 ( U9 Y ) ( U10 A ) ;
+   - NET14 ( U10 Y ) ( U11 A ) ;
+   - NET15 ( U11 Y ) ( U12 A ) ;
+   - NET16 ( U12 Y ) ( U13 A ) ;
+   - NET17 ( U13 Y ) ( U14 A ) ;
+   - NET18 ( U14 Y ) ( U15 D ) ;
+   - NET19 ( U15 Q ) ( U16 A ) ;
+   - NET20 ( U16 Y ) ( U20 A ) ;
+END NETS
+
+END DESIGN
