@@ -25,8 +25,8 @@ python rl.py dadda.def
 
 ```
 rl-chip-placer/
-├── rl.py              # Main algorithm
-├── dadda.def       # Input design
+├── rl.py            # Main algorithm
+├── dadda.def        # Input design
 └── dadda.output.def # Optimized output
 ```
 
